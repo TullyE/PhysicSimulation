@@ -1,17 +1,16 @@
 class Line {
-  Location beg, end;
+  Vector beg, end;
   boolean drawing = false;
-  //boolean showAxis = false;
-  boolean showAxis = true;
+  boolean showAxis = false;
   Line() {
     drawing = false;
   }
 
   void update() {
     if (drawing) {
-      float endX = beg.x + (mouseX - beg.x) * -1;
-      float endY = beg.y + (mouseY - beg.y) * -1;
-      end = new Location(endX, endY);
+      float endX =  beg.x + translation.x + (mouseX - beg.x) * -1;
+      float endY = beg.y + translation.y + (mouseY - beg.y) * -1;
+      end = new Vector(endX, endY);
       show();
     }
   }
