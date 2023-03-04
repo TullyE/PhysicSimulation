@@ -1,6 +1,6 @@
 import g4p_controls.*;
 
-ArrayList<Object> particles = new ArrayList<Object>();
+ArrayList <Object> particles = new ArrayList <Object> ();
 Line l;
 Vector translation = new Vector(0, 0);
 Vector mouseStart;
@@ -20,7 +20,7 @@ void setup() {
 void draw() {
 
   background(0);
-  pushMatrix();
+  //pushMatrix();
   translate(translation.x, translation.y);
   fill(255, 0, 0);
   ellipse(0, 0, 10, 10);
@@ -37,7 +37,7 @@ void draw() {
     p.move();
     p.show();
   }
-  popMatrix();
+  //popMatrix();
 }
 
 void keyPressed() {
